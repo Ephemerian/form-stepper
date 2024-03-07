@@ -1,16 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/world.ico">
-    <link rel="stylesheet" href="src/style/styles.scss">
+    <link rel="shortcut icon" href="/world.ico" />
+    <link rel="stylesheet" href="src/style/styles.scss" />
     <title>Stepper</title>
   </head>
   <body>
-    <div>
-      <h2 class="text">Some text for example</h2>
-    </div>
+
+    <header class="header">
+      <a href="#">
+        <img
+          class="header__logo"
+          src="/src/images/yourcompany.svg"
+          alt="Logo of company"
+        />
+      </a>
+      <img
+      class="header__progress-bar"
+      src="/src/images/task1.svg"
+      alt="Stepper progress bar"
+    />
+    </header>
+
+    <section class="estimate">
+      <h2 class="estimate__title">First, let’s get a quick price estimate</h2>
+      <div class="estimate__lists">
+        <ul class="estimate__list">
+          <li class="estimate__text"><p>Gender</p></li>
+          <ul class="estimate__button-choose">
+            <li><button class="estimate__button">Male</button></li>
+            <li><button class="estimate__button">Female</button></li>
+          </ul>
+          <li class="estimate__text"><p>Date of birth</p></li>
+          <li>
+            <input id="" class="estimate__input" placeholder="MM/DD/YYYY" />
+          </li>
+        </ul>
+        <ul class="estimate__list">
+          <li class="estimate__text"><p>Nicotine user?</p></li>
+          <ul class="estimate__button-choose">
+            <li><button class="estimate__button">Yes</button></li>
+            <li><button class="estimate__button">No</button></li>
+          </ul>
+          <li class="estimate__text"><p>ZIP Code</p></li>
+          <li><input class="estimate__input" placeholder="ZIP Code" /></li>
+        </ul>
+      </div>
+      <button class="estimate__button-next">See estimate</button>
+    </section>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
