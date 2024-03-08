@@ -24,32 +24,90 @@
     />
     </header>
 
-    <section class="estimate">
-      <h2 class="estimate__title">First, let’s get a quick price estimate</h2>
-      <div class="estimate__lists">
-        <ul class="estimate__list">
-          <li class="estimate__text"><p>Gender</p></li>
-          <ul class="estimate__button-choose">
-            <li><button class="estimate__button">Male</button></li>
-            <li><button class="estimate__button">Female</button></li>
+      <section class="estimate">
+        <h2 class="estimate__title">First, let’s get a quick price estimate</h2>
+        <div class="estimate__lists">
+          <ul class="estimate__list">
+            <li class="estimate__text"><p>Gender</p></li>
+            <ul class="estimate__button-choose">
+              <li><button class="estimate__button">Male</button></li>
+              <li><button class="estimate__button">Female</button></li>
+            </ul>
+            <li class="estimate__text"><p>Date of birth</p></li>
+            <li>
+              <input id="" class="estimate__input" placeholder="MM/DD/YYYY" />
+            </li>
           </ul>
-          <li class="estimate__text"><p>Date of birth</p></li>
-          <li>
-            <input id="" class="estimate__input" placeholder="MM/DD/YYYY" />
-          </li>
+          <ul class="estimate__list">
+            <li class="estimate__text"><p>Nicotine user?</p></li>
+            <ul class="estimate__button-choose">
+              <li><button class="estimate__button">Yes</button></li>
+              <li><button class="estimate__button">No</button></li>
+            </ul>
+            <li class="estimate__text"><p>ZIP Code</p></li>
+            <li><input class="estimate__input" placeholder="ZIP Code" /></li>
+          </ul>
+        </div>
+        <button class="estimate__button-next">See estimate</button>
+      </section>
+
+      <section class="rates">
+        <div class="rates__form">
+          <div class="rates__edit">
+            <img src="/src/images/arr-left.svg">
+            <p>Edit</p>
+          </div>
+        <h2 class="estimate__title">Here are your estimated monthly rates</h2>
+        <div class="rates__health">
+        <ul>
+          <li><p class="rates__health-status">Excellent health</p></li>
+          <li><p class="rates__health-price">$96<span class="rates__health-month">/mo</span></p></li>
         </ul>
-        <ul class="estimate__list">
-          <li class="estimate__text"><p>Nicotine user?</p></li>
-          <ul class="estimate__button-choose">
-            <li><button class="estimate__button">Yes</button></li>
-            <li><button class="estimate__button">No</button></li>
-          </ul>
-          <li class="estimate__text"><p>ZIP Code</p></li>
-          <li><input class="estimate__input" placeholder="ZIP Code" /></li>
+        <img class="rates__vertical-divider" src="/src/images/vertical-line.svg">
+        <ul>
+          <li><p class="rates__health-status">Good health</p></li>
+          <li><p class="rates__health-price">$128<span class="rates__health-month">/mo</span></p></li>
+        </ul>
+        <img class="rates__vertical-divider" src="/src/images/vertical-line.svg">
+        <ul>
+          <li><p class="rates__health-status">Fair health</p></li>
+          <li><p class="rates__health-price">$198<span class="rates__health-month">/mo</span></p></li>
         </ul>
       </div>
-      <button class="estimate__button-next">See estimate</button>
-    </section>
+      <img class="rates__horizontal-divider" src="/src/images/horizontal-line.svg">
+
+      <div class="rates__range">
+        <ul class="rates__range-list">
+          <li class="rates__range-description">
+            <p>Coverage amount</p>
+          </li>
+          <li class="rates__range-amount" id="coverage-amount">
+            <p>$300,000</p>
+          </li>
+          <li>
+            <input class="styled-slider slider-progress" type="range" min="100000" max="750000" value="300000" step="10000" id="coverage-slider">
+          </li>
+        </ul>
+        <ul class="rates__range-list">
+          <li class="rates__range-description">
+            <p>Years of coverage</p>
+            <div class="tooltip">Test</div>
+          </li>
+          <li class="rates__range-amount" id="years-coverage"><p>10 years</p></li>
+          <li>
+            <input class="styled-slider slider-progress" type="range" min="5" max="40" value="10" step="1" id="years-slider">
+          </li>
+        </ul>
+      </div>
+      
+      <div class="rates__question">
+        <img src="/src/images/money.svg">
+        <p>How much do I need?</p>
+      </div>
+      <button class="rates__button">Personalize quote</button>
+      </div>
+      <p class="rates__disclaimer">Please note that all prices quoted are subject to change, including due to underwriting.</p>
+      </section>
 
     <script type="module" src="/main.js"></script>
   </body>

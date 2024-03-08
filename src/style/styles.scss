@@ -10,6 +10,7 @@
 body {
   font-family: "Inter", sans-serif;
   color: var(--gray-900);
+  margin: 0;
 }
 
 a {
@@ -65,8 +66,10 @@ ol {
   margin: 0;
 }
 
+// Estimate section
+
 .estimate {
-  margin-top: 48px;
+  padding-top: 48px;
   margin-left: auto;
   margin-right: auto;
   width: 800px;
@@ -79,11 +82,11 @@ ol {
 }
 
 .estimate__title {
+  margin-bottom: 32px;
   max-width: 400px;
   font-weight: 600;
   font-size: 32px;
   text-align: center;
-  margin-bottom: 32px;
 }
 
 .estimate__lists {
@@ -146,10 +149,12 @@ ol {
   font-size: 16px;
   letter-spacing: 0.5px;
   margin-bottom: 77px;
+
   &:hover,
   &:focus {
     background-color: var(--primary);
   }
+
   &::after {
     content: url(/src/images/arr-right.svg);
     position: absolute;
@@ -157,4 +162,231 @@ ol {
     top: 50%;
     transform: translateY(-50%);
   }
+}
+
+// Rates section
+
+.rates__form {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 23px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  border-radius: 5px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.rates__edit {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-right: auto;
+    padding: 12px 0px 0px 12px;
+    gap: 22px;
+}
+
+.rates__health {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 33px;
+    text-align: center;
+}
+
+.rates__health-status {
+  margin-bottom: 4px;
+}
+
+.rates__health-price {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.rates__health-month {
+  font-size: 20px;
+}
+
+.rates__health-status {
+    position: relative;
+    &::after {
+        content: url(/src/images/question.svg);
+        position: relative;
+        left: 4px;
+        top: -2px;
+    }
+    &::before {
+        content: 'Each person’s situation is different - so we always recommend talking to an agent. Generally, our recommendation is to cover yourself up to age 65...'; // The content you want to show
+        position: absolute;
+        width: 300px; // adjust as necessary
+        background-color: #fff; // Background color of the tooltip
+        border: 1px solid #ccc; // Border, if necessary
+        padding: 10px; // Padding inside the tooltip
+        display: none;
+        top: 20px; // Distance from the top of the .rates__health-status element
+        right: 0; // adjust as necessary
+        z-index: 100; // Make sure it's above other content
+        // Any other styles...
+      }
+    
+      &:hover::before {
+        display: block; // Show the tooltip on hover
+      }
+}
+
+.rates__vertical-divider {
+    margin: 0px 22px 0 22px;
+}
+
+.rates__horizontal-divider {
+    margin-bottom: 30px;
+}
+
+.rates__range {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 32px;
+    gap: 56px;
+}
+
+.rates__range-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rates__range-description {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  margin-bottom: 16px;
+  &::after {
+    content: url(/src/images/question.svg);
+    position: relative;
+    left: 4px;
+    top: -2px;
+}
+}
+
+.rates__range-amount {
+  margin-bottom: 27px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.rates__question {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 3px;
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.rates__button {
+    padding: 16px 62px;
+    margin-bottom: 64px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+}
+
+.rates__disclaimer {
+    font-size: 14px;
+    text-align: center;
+    color: var(--gray-300);
+}
+
+// Styles for range inputs in Rates section
+input[type=range].styled-slider {
+  -webkit-appearance: none;
+  height: 27px;
+}
+
+input[type=range].styled-slider.slider-progress {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 30px + var(--ratio) * (100% - 30px));
+  width: 220px;
+}
+
+input[type=range].styled-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background: #fff;
+  border: 6px solid #44b0ef;
+  box-shadow: none;
+  margin-top: calc(10px * 0.5 - max(30px * 0.5,6px));
+}
+
+input[type=range].styled-slider::-webkit-slider-runnable-track {
+  height: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #cdd5df;
+  box-shadow: none;
+}
+
+input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {
+  background: linear-gradient(#44b0ef,#44b0ef) 0/var(--sx) 100% no-repeat, #cdd5df;
+}
+
+input[type=range].styled-slider::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background: #fff;
+  border: 6px solid #44b0ef;
+  box-shadow: none;
+}
+
+input[type=range].styled-slider::-moz-range-track {
+  height: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #cdd5df;
+  box-shadow: none;
+}
+
+input[type=range].styled-slider.slider-progress::-moz-range-track {
+  background: linear-gradient(#44b0ef,#44b0ef) 0/var(--sx) 100% no-repeat, #cdd5df;
+}
+
+input[type=range].styled-slider::-ms-thumb {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background: #fff;
+  border: 6px solid #44b0ef;
+  box-shadow: none;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+input[type=range].styled-slider::-ms-track {
+  height: 10px;
+  border-radius: 0;
+  background: #cdd5df;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+input[type=range].styled-slider.slider-progress::-ms-fill-lower {
+  height: 10px;
+  border-radius: 0px;
+  background: #44b0ef;
+  border: none;
 }
