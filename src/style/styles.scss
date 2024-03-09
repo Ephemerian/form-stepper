@@ -216,24 +216,8 @@ ol {
         position: relative;
         left: 4px;
         top: -2px;
+        cursor: pointer;
     }
-    &::before {
-        content: 'Each person’s situation is different - so we always recommend talking to an agent. Generally, our recommendation is to cover yourself up to age 65...'; // The content you want to show
-        position: absolute;
-        width: 300px; // adjust as necessary
-        background-color: #fff; // Background color of the tooltip
-        border: 1px solid #ccc; // Border, if necessary
-        padding: 10px; // Padding inside the tooltip
-        display: none;
-        top: 20px; // Distance from the top of the .rates__health-status element
-        right: 0; // adjust as necessary
-        z-index: 100; // Make sure it's above other content
-        // Any other styles...
-      }
-    
-      &:hover::before {
-        display: block; // Show the tooltip on hover
-      }
 }
 
 .rates__vertical-divider {
@@ -258,22 +242,74 @@ ol {
 }
 
 .rates__range-description {
+  position: relative;
   display: flex;
   flex-direction: row;
   gap: 4px;
   margin-bottom: 16px;
-  &::after {
-    content: url(/src/images/question.svg);
-    position: relative;
-    left: 4px;
-    top: -2px;
 }
+
+.rates__range-help {
+  display: flex;
+  margin-bottom: auto;
+  cursor: pointer;
 }
 
 .rates__range-amount {
   margin-bottom: 27px;
   font-size: 20px;
   font-weight: 600;
+}
+
+.rates__tooltip {
+  position: relative;
+  display: flex;
+  margin-bottom: auto;
+  cursor: pointer;
+
+  .rates__tooltip-list {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    width: 320px;
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.7px;
+    background-color: var(--gray-900);
+    color: var(--white);
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -157px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: black transparent transparent transparent;
+    }
+    
+    .rates__tooltip-terms {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .rates__tooltip-text {
+      font-weight: 600;
+    }
+  }
+
+  &:hover .rates__tooltip-list {
+    visibility: visible;
+  }
 }
 
 .rates__question {
