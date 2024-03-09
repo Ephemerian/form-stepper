@@ -68,6 +68,10 @@ ol {
   height: 5px;
   background-color: var(--primary);
   border-radius: 10px;
+
+  transition: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 // Estimate section
