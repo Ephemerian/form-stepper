@@ -445,3 +445,41 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
   background: #44b0ef;
   border: none;
 }
+
+// Thanks section
+
+.thanks {
+  padding: 50px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  border-radius: 5px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.thanks__list {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 20px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.thanks__title {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.thanks__button {
+  padding: 16px 62px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+}
