@@ -10,9 +10,8 @@
   <body>
 
     <header class="header">
-      <a href="#">
+      <a class="header__logo" href="#">
         <img
-          class="header__logo"
           src="/src/images/yourcompany.svg"
           alt="Logo of company"
         />
@@ -21,34 +20,54 @@
       </div>
     </header>
 
-      <section class="estimate">
+      <section id="estimate" class="estimate">
         <h2 class="estimate__title">First, let’s get a quick price estimate</h2>
         <div class="estimate__lists">
           <ul class="estimate__list">
             <li class="estimate__text"><p>Gender</p></li>
-            <ul class="estimate__button-choose">
-              <li><button class="estimate__button">Male</button></li>
-              <li><button class="estimate__button">Female</button></li>
-            </ul>
+            <li class="estimate__checkbox">
+              <ul class="estimate__toolbar">
+                <li>
+              <input type="radio" id="male" name="gender" value="male">
+              <label class="estimate__button" for="male">Male</label>
+            </li>
+            <li>
+              <input type="radio" id="female" name="gender" value="female">
+              <label class="estimate__button" for="female">Female</label>
+            </li>
+              </ul>
+          </li>
             <li class="estimate__text"><p>Date of birth</p></li>
             <li>
               <input id="" class="estimate__input" placeholder="MM/DD/YYYY" />
             </li>
           </ul>
+
           <ul class="estimate__list">
+
             <li class="estimate__text"><p>Nicotine user?</p></li>
-            <ul class="estimate__button-choose">
-              <li><button class="estimate__button">Yes</button></li>
-              <li><button class="estimate__button">No</button></li>
-            </ul>
+            <li class="estimate__checkbox">
+              <ul class="estimate__toolbar">
+                <li>
+                  <input type="radio" id="yesOption" name="estimateOption" class="estimate__radio-input">
+                  <label class="estimate__button" for="yesOption">Yes</label>
+              </li>
+              <li>
+                  <input type="radio" id="noOption" name="estimateOption" class="estimate__radio-input">
+                  <label class="estimate__button" for="noOption">No</label>
+              </li>
+              </ul>
+          </li>
+
             <li class="estimate__text"><p>ZIP Code</p></li>
             <li><input class="estimate__input" placeholder="ZIP Code" /></li>
+
           </ul>
         </div>
         <button class="estimate__button-next">See estimate</button>
       </section>
 
-      <section class="rates">
+      <section id="rates" class="rates">
         <div class="rates__form">
           <div class="rates__edit">
             <img src="/src/images/arr-left.svg">
@@ -131,7 +150,7 @@
       <p class="rates__disclaimer">Please note that all prices quoted are subject to change, including due to underwriting.</p>
       </section>
 
-      <section class="thanks">
+      <section id="thanks" class="thanks">
         <ul class="thanks__list">
           <li>
             <h2 class="thanks__title">Thank You for Your Inquiry</h2>
@@ -150,7 +169,7 @@
           </li>
           <li>
             <a href="#">
-              <button class="thanks__button">Return to Home</button>
+              <button class="thanks__button thanks__return-home">Return to Home</button>
             </a>
           </li>
         </ul>

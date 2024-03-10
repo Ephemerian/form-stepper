@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     editButton.addEventListener('click', function() {
         ratesSection.style.display = 'none';
-        estimateSection.style.display = 'block';
-        estimateSection.offsetHeight;
         estimateSection.style.display = 'flex';
     });
 
@@ -25,4 +23,5 @@ document.addEventListener('DOMContentLoaded', function() {
         ratesSection.style.display = 'none';
         thanksSection.style.display = 'block';
     });
+
 });
