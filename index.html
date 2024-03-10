@@ -35,7 +35,12 @@
             </li>
             <li class="estimate__text"><p>Date of birth</p></li>
             <li>
-                <input class="estimate__input" placeholder="MM/DD/YYYY">
+                <input class="estimate__input" 
+                type="text" 
+                placeholder="MM/DD/YYYY" 
+                pattern="(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])\/(19|20)\d{2}"
+                title="Date of birth must be in the format MM/DD/YYYY with numbers only."
+                required>
             </li>
         </ul>
 
@@ -44,21 +49,28 @@
             <li class="estimate__checkbox">
                 <ul class="estimate__toolbar">
                     <li>
-                        <input type="radio" id="yesOption" name="estimateOption" class="estimate__radio-input">
+                        <input type="radio" id="yesOption" name="estimateOption" value="yes" class="estimate__radio-input">
                         <label class="estimate__button" for="yesOption">Yes</label>
                     </li>
                     <li>
-                        <input type="radio" id="noOption" name="estimateOption" class="estimate__radio-input">
+                        <input type="radio" id="noOption" name="estimateOption" value="no" class="estimate__radio-input">
                         <label class="estimate__button" for="noOption">No</label>
                     </li>
                 </ul>
             </li>
 
             <li class="estimate__text"><p>ZIP Code</p></li>
-            <li><input class="estimate__input" placeholder="ZIP Code"></li>
+            <li>
+                <input class="estimate__input" 
+                type="text" 
+                placeholder="ZIP Code" 
+                pattern="\d{1,6}"
+                title="ZIP Code must be a number with up to 6 digits."
+                required>
+            </li>
         </ul>
     </div>
-    <button class="estimate__button-next">See estimate</button>
+    <button id="estimate-button" class="estimate__button-next">See estimate</button>
 </section>
 
 <section id="rates" class="rates">
@@ -92,7 +104,7 @@
                     <p>Coverage amount</p>
                     <img class="rates__range-help" src="/src/images/question.svg">
                 </li>
-                <li class="rates__range-amount"><p>$300,000</p></li>
+                <li class="rates__range-amount" id="coverage-amount"><p>$300,000</p></li>
                 <li>
                     <input class="styled-slider slider-progress" type="range" min="100000" max="750000" value="300000" step="10000" id="coverage-slider">
                 </li>
@@ -130,7 +142,7 @@
                       </div>
                     </div>
                 </li>
-                <li class="rates__range-amount"><p>10 years</p></li>
+                <li class="rates__range-amount" id="years-coverage"><p>10 years</p></li>
                 <li>
                     <input class="styled-slider slider-progress" type="range" min="5" max="40" value="10" step="1" id="years-slider">
                 </li>
@@ -141,7 +153,7 @@
             <img src="/src/images/money.svg" alt="Money question">
             <p>How much do I need?</p>
         </div>
-        <button class="rates__button">Personalize quote</button>
+        <button id="quote-button" class="rates__button">Personalize quote</button>
     </div>
     <p class="rates__disclaimer">Please note that all prices quoted are subject to change, including due to underwriting.</p>
 </section>
