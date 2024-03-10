@@ -1,180 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/world.ico" />
-    <link rel="stylesheet" href="src/style/styles.scss" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/world.ico">
+    <link rel="stylesheet" href="src/style/styles.scss">
     <title>Stepper</title>
-  </head>
-  <body>
+</head>
+<body>
 
-    <header class="header">
-      <a class="header__logo" href="#">
-        <img
-          src="/src/images/yourcompany.svg"
-          alt="Logo of company"
-        />
-      </a>
-      <div class="header__progress-bar">
-      </div>
-    </header>
+<header class="header">
+    <a href="#" class="header__logo">
+        <img src="/src/images/yourcompany.svg" alt="Logo of company">
+    </a>
+    <div class="header__progress-bar"></div>
+</header>
 
-      <section id="estimate" class="estimate">
-        <h2 class="estimate__title">First, let’s get a quick price estimate</h2>
-        <div class="estimate__lists">
-          <ul class="estimate__list">
+<section id="estimate" class="estimate">
+    <h2 class="estimate__title">First, let’s get a quick price estimate</h2>
+    <div class="estimate__lists">
+        <ul class="estimate__list">
             <li class="estimate__text"><p>Gender</p></li>
             <li class="estimate__checkbox">
-              <ul class="estimate__toolbar">
-                <li>
-              <input type="radio" id="male" name="gender" value="male">
-              <label class="estimate__button" for="male">Male</label>
+                <ul class="estimate__toolbar">
+                    <li>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label class="estimate__button" for="male">Male</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label class="estimate__button" for="female">Female</label>
+                    </li>
+                </ul>
             </li>
-            <li>
-              <input type="radio" id="female" name="gender" value="female">
-              <label class="estimate__button" for="female">Female</label>
-            </li>
-              </ul>
-          </li>
             <li class="estimate__text"><p>Date of birth</p></li>
             <li>
-              <input id="" class="estimate__input" placeholder="MM/DD/YYYY" />
+                <input class="estimate__input" placeholder="MM/DD/YYYY">
             </li>
-          </ul>
+        </ul>
 
-          <ul class="estimate__list">
-
+        <ul class="estimate__list">
             <li class="estimate__text"><p>Nicotine user?</p></li>
             <li class="estimate__checkbox">
-              <ul class="estimate__toolbar">
-                <li>
-                  <input type="radio" id="yesOption" name="estimateOption" class="estimate__radio-input">
-                  <label class="estimate__button" for="yesOption">Yes</label>
-              </li>
-              <li>
-                  <input type="radio" id="noOption" name="estimateOption" class="estimate__radio-input">
-                  <label class="estimate__button" for="noOption">No</label>
-              </li>
-              </ul>
-          </li>
+                <ul class="estimate__toolbar">
+                    <li>
+                        <input type="radio" id="yesOption" name="estimateOption" class="estimate__radio-input">
+                        <label class="estimate__button" for="yesOption">Yes</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="noOption" name="estimateOption" class="estimate__radio-input">
+                        <label class="estimate__button" for="noOption">No</label>
+                    </li>
+                </ul>
+            </li>
 
             <li class="estimate__text"><p>ZIP Code</p></li>
-            <li><input class="estimate__input" placeholder="ZIP Code" /></li>
+            <li><input class="estimate__input" placeholder="ZIP Code"></li>
+        </ul>
+    </div>
+    <button class="estimate__button-next">See estimate</button>
+</section>
 
-          </ul>
-        </div>
-        <button class="estimate__button-next">See estimate</button>
-      </section>
-
-      <section id="rates" class="rates">
-        <div class="rates__form">
-          <div class="rates__edit">
-            <img src="/src/images/arr-left.svg">
+<section id="rates" class="rates">
+    <div class="rates__form">
+        <div class="rates__edit">
+            <img src="/src/images/arr-left.svg" alt="Edit">
             <p>Edit</p>
-          </div>
+        </div>
         <h2 class="estimate__title">Here are your estimated monthly rates</h2>
         <div class="rates__health">
-        <ul>
-          <li><p class="rates__health-status">Excellent health</p></li>
-          <li><p class="rates__health-price">$96<span class="rates__health-month">/mo</span></p></li>
-        </ul>
-        <img class="rates__vertical-divider" src="/src/images/vertical-line.svg">
-        <ul>
-          <li><p class="rates__health-status">Good health</p></li>
-          <li><p class="rates__health-price">$128<span class="rates__health-month">/mo</span></p></li>
-        </ul>
-        <img class="rates__vertical-divider" src="/src/images/vertical-line.svg">
-        <ul>
-          <li><p class="rates__health-status">Fair health</p></li>
-          <li><p class="rates__health-price">$198<span class="rates__health-month">/mo</span></p></li>
-        </ul>
-      </div>
-      <img class="rates__horizontal-divider" src="/src/images/horizontal-line.svg">
+            <ul>
+                <li><p class="rates__health-status">Excellent health</p></li>
+                <li><p class="rates__health-price">$96<span class="rates__health-month">/mo</span></p></li>
+            </ul>
+            <img class="rates__vertical-divider" src="/src/images/vertical-line.svg">
+            <ul>
+                <li><p class="rates__health-status">Good health</p></li>
+                <li><p class="rates__health-price">$128<span class="rates__health-month">/mo</span></p></li>
+            </ul>
+            <img class="rates__vertical-divider" src="/src/images/vertical-line.svg">
+            <ul>
+                <li><p class="rates__health-status">Fair health</p></li>
+                <li><p class="rates__health-price">$198<span class="rates__health-month">/mo</span></p></li>
+            </ul>
+        </div>
+        <img class="rates__horizontal-divider" src="/src/images/horizontal-line.svg">
 
-      <div class="rates__range">
-        <ul class="rates__range-list">
-          <li class="rates__range-description">
-            <p>Coverage amount</p>
-            <img class="rates__range-help" src="/src/images/question.svg">
-          </li>
-          <li class="rates__range-amount" id="coverage-amount">
-            <p>$300,000</p>
-          </li>
-          <li>
-            <input class="styled-slider slider-progress" type="range" min="100000" max="750000" value="300000" step="10000" id="coverage-slider">
-          </li>
-        </ul>
-        <ul class="rates__range-list">
-          <li class="rates__range-description">
-            <p>Years of coverage</p>
-            <div class="rates__tooltip">
-              <img src="/src/images/question.svg">
-              <ul class="rates__tooltip-list">
-                <li>
-            <p>Each person’s situation is different - so we always recommend talking to an agent.</p>
+        <div class="rates__range">
+            <ul class="rates__range-list">
+                <li class="rates__range-description">
+                    <p>Coverage amount</p>
+                    <img class="rates__range-help" src="/src/images/question.svg">
                 </li>
-                <ul class="rates__tooltip-terms">
+                <li class="rates__range-amount"><p>$300,000</p></li>
                 <li>
-            <p>Generally, our recommendation is to cover yourself up to age 65 (ex. If you’re 45, a 20 year term would cover you to 65).</p>
+                    <input class="styled-slider slider-progress" type="range" min="100000" max="750000" value="300000" step="10000" id="coverage-slider">
                 </li>
+            </ul>
+            <ul class="rates__range-list">
+                <li class="rates__range-description">
+                    <p>Years of coverage</p>
+                    <div class="rates__tooltip">
+                        <img src="/src/images/question.svg">
+                        <div class="rates__tooltip-content">
+                          <ul class="rates__tooltip-list">
+                              <li>
+                                  <p>Each person’s situation is different - so we always recommend talking to an agent.</p>
+                              </li>
+                              <li>
+                                  <ul class="rates__tooltip-terms">
+                                      <li>
+                                          <p>Generally, our recommendation is to cover yourself up to age 65 (ex. If you’re 45, a 20 year term would cover you to 65).</p>
+                                      </li>
+                                      <li>
+                                          <p><span class="rates__tooltip-text">Term Lengths:</span></p>
+                                      </li>
+                                      <li>
+                                          <p><span class="rates__tooltip-text">10 year term</span> - Provides the shortest protection, however, will come at the lowest cost.</p>
+                                      </li>
+                                      <li>
+                                          <p><span class="rates__tooltip-text">20 year term</span> - The most common term length purchased, provides adequate protection for most.</p>
+                                      </li>
+                                      <li>
+                                          <p><span class="rates__tooltip-text">30 and 40 year terms</span> - Provides the longest protection, at a higher cost.</p>
+                                      </li>
+                                  </ul>
+                              </li>
+                          </ul>
+                      </div>
+                    </div>
+                </li>
+                <li class="rates__range-amount"><p>10 years</p></li>
                 <li>
-            <p><span class="rates__tooltip-text">Term Lengths:</span></p>
+                    <input class="styled-slider slider-progress" type="range" min="5" max="40" value="10" step="1" id="years-slider">
                 </li>
-                <li>
-            <p><span class="rates__tooltip-text">10 year term</span> - Provides the shortest protection, however, will come at the lowest cost.</p>
-                </li>
-                <li>
-            <p><span class="rates__tooltip-text">20 year term</span> - The most common term length purchased, provides adequate protection for most.</p>
-                </li>
-                <li>
-            <p><span class="rates__tooltip-text">30 and 40 year terms</span> - Provides the longest protection, at a higher cost.</p>
-                </li>
-              </ul>
-              </ul>
-            </div>
-          </li>
-          <li class="rates__range-amount" id="years-coverage"><p>10 years</p></li>
-          <li>
-            <input class="styled-slider slider-progress" type="range" min="5" max="40" value="10" step="1" id="years-slider">
-          </li>
-        </ul>
-      </div>
-      
-      <div class="rates__question">
-        <img src="/src/images/money.svg">
-        <p>How much do I need?</p>
-      </div>
-      <button class="rates__button">Personalize quote</button>
-      </div>
-      <p class="rates__disclaimer">Please note that all prices quoted are subject to change, including due to underwriting.</p>
-      </section>
+            </ul>
+        </div>
 
-      <section id="thanks" class="thanks">
-        <ul class="thanks__list">
-          <li>
-            <h2 class="thanks__title">Thank You for Your Inquiry</h2>
-          </li>
-          <li>
-            <img width="80px" height="80px" src="/src/images/success.svg">
-          </li>
-          <li>
-            <p>Your personalized quote has been generated. We understand that every person's situation is unique, and we're here to offer you tailored solutions for your insurance needs</p>
-          </li>
-          <li>
-           <p>A detailed breakdown of your estimate has been sent to your email. Our expert advisors will reach out shortly to discuss your coverage options and next steps</p>
-          </li>
-          <li>
-            <p>We look forward to helping you secure your future</p>
-          </li>
-          <li>
-            <a href="#">
-              <button class="thanks__button thanks__return-home">Return to Home</button>
-            </a>
-          </li>
-        </ul>
-      </section>
+        <div class="rates__question">
+            <img src="/src/images/money.svg" alt="Money question">
+            <p>How much do I need?</p>
+        </div>
+        <button class="rates__button">Personalize quote</button>
+    </div>
+    <p class="rates__disclaimer">Please note that all prices quoted are subject to change, including due to underwriting.</p>
+</section>
 
-    <script type="module" src="/main.js"></script>
-  </body>
+<section id="thanks" class="thanks">
+    <ul class="thanks__list">
+        <li><h2 class="thanks__title">Thank You for Your Inquiry</h2></li>
+        <li><img width="80px" height="80px" src="/src/images/success.svg" alt="Success"></li>
+        <li><p>Your personalized quote has been generated. We understand that every person's situation is unique, and we're here to offer you tailored solutions for your insurance needs.</p></li>
+        <li><p>A detailed breakdown of your estimate has been sent to your email. Our expert advisors will reach out shortly to discuss your coverage options and next steps.</p></li>
+        <li><p>We look forward to helping you secure your future.</p></li>
+        <li>
+            <a href="#"><button class="thanks__button thanks__return-home">Return to Home</button></a>
+        </li>
+    </ul>
+</section>
+
+<script type="module" src="/main.js"></script>
+
+</body>
 </html>
