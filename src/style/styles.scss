@@ -527,36 +527,3 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
     background-color: var(--primary-hover);
   }
 }
-
-// Fade animation for sections
-
-#estimate {
-  opacity: 1;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -moz-transition: opacity 0.3s ease-in-out;
-  -ms-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-}
-
-// Sections animation
-
-.fade-out {
-  animation: fadeOut 0.5s;
-  animation-fill-mode: forwards; /* Додано, щоб забезпечити кінцевий стан анімації */
-}
-
-.fade-in {
-  animation: fadeIn 0.5s;
-  animation-fill-mode: forwards; /* Додано, щоб забезпечити кінцевий стан анімації */
-}
-
-@keyframes fadeOut {
-  from {opacity: 1; visibility: visible;}
-  to {opacity: 0; visibility: hidden;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; visibility: hidden;}
-  to {opacity: 1; visibility: visible;}
-}

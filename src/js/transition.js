@@ -7,52 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const personalizeButton = document.querySelector('.rates__button');
     const returnButton = document.querySelector('.thanks__button');
 
-    // function hideSection(section) {
-    //     section.classList.add('fade-out');
-    //     setTimeout(() => {
-    //         section.style.display = 'none';
-    //         section.classList.remove('fade-out');
-    //     }, 500);
-    // }
-    
-    // function showSection(section) {
-    //     section.style.display = 'block';
-    //     section.classList.add('fade-in');
-    //     setTimeout(() => {
-    //         section.classList.remove('fade-in');
-    //     }, 500);
-    // }
-
-    // ratesSection.style.display = 'none';
-    // thanksSection.style.display = 'none';
-
-    // estimateButton.addEventListener('click', function() {
-    //     hideSection(estimateSection);
-    //     showSection(ratesSection);
-    // });
-
-    // editButton.addEventListener('click', function() {
-    //     hideSection(ratesSection);
-    //     showSection(estimateSection);
-    // });
-
-    // personalizeButton.addEventListener('click', function() {
-    //     hideSection(ratesSection);
-    //     showSection(thanksSection);
-    // });
-
-    // returnButton.addEventListener('click', function(){
-    //     hideSection(thanksSection);
-    //     showSection(estimateSection);
-    //     estimateSection.style.display ='flex';
-    // });
-
     ratesSection.style.display = 'none';
     thanksSection.style.display = 'none';
 
     estimateButton.addEventListener('click', function() {
-        estimateSection.style.display = 'none';
-        ratesSection.style.display = 'block';
+        
     });
 
     editButton.addEventListener('click', function() {
